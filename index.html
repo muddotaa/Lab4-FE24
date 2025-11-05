@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="keywords" content="портфоліо, студент, біографія, хобі, улюблені фільми, місто">
+  <meta name="description" content="Коротка веб-сторінка з інформацією про автора: біографія, освіта, хобі, улюблені фільми та улюблене місто.">
+
+  <title>Шевченко Д.В., гр. ІО-34 — персональна сторінка</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; margin: 24px; }
+    img { max-width: 100%; height: auto; display: block; margin: 12px 0; }
+    figure { margin: 0; }
+    figcaption { font-size: 0.9rem; color: #555; }
+    .credit { display:block; font-size:.85rem; color:#666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Шевченко Дмитро В’ячеславович</h2>
+  </header>
+
+  <main>
+    <section>
+      <h3>Про мене</h3>
+      <p><strong>Місце й дата народження:</strong> 12 травня 2006 року, м. Сімферополь.</p>
+      <p><strong>Освіта:</strong> Школа №91, м. Київ; НТУУ «КПІ», м. Київ.</p>
+    </section>
+
+    <section>
+      <h3>Хобі</h3>
+      <ul>
+        <li>Спорт</li>
+        <li>Комп’ютерні ігри</li>
+        <li>Фотографія</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Улюблені фільми</h3>
+      <ol>
+        <li id="element-4">«Мої думки тихі» (2020)</li>
+        <li id="element-5">«Я працюю на цвинтарі» (2022)</li>
+        <li>«Припутні» (2017)</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Улюблене місто — Прага</h3>
+      <p>
+        Прага — столиця та найбільше місто Чеської Республіки, адміністративний центр
+        Центральночеського краю. Розташована в історичній області Богемія на річці Влтава.
+        Місто вражає збереженою середньовічною архітектурою, Карловим мостом та Староміською площею.
+      </p>
+
+      <figure>
+        <a href="https://www.prague.eu/" target="_blank" rel="noopener">
+          <img
+            id="prague-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Prague_%286365119737%29.jpg"
+            alt="Панорама Праги з Влтавою та мостами">
+        </a>
+
+        <div class="image-controls">
+          <button id="add-btn">Додати</button>
+          <button id="zoom-in-btn">Збільшити</button>
+          <button id="zoom-out-btn">Зменшити</button>
+          <button id="remove-btn">Видалити</button>
+        </div>
+        <figcaption>
+          Натисніть на фото, щоб відвідати офіційний сайт Праги.
+          <span class="credit">
+            Фото: Moyan Brenn (CC BY 2.0), джерело —
+            <a href="https://commons.wikimedia.org/wiki/File:Prague_(6365119737).jpg">Wikimedia Commons</a>.
+          </span>
+        </figcaption>
+      </figure>
+
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025. Навчальний приклад HTML5.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

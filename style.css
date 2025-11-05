@@ -1,0 +1,69 @@
+/* ================================
+   1) Клікабельні текстові елементи (Завдання 1)
+   ================================ */
+.clickable{
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.toggled-a{ background:#fbbf24 !important; color:#111827 !important; } /* getElementById */
+.toggled-b{ background:#34d399 !important; color:#111827 !important; } /* querySelector  */
+.toggled-neutral{ background:#bde0fe !important; color:#111827 !important; }
+
+/* ================================
+   2) Фото з Вікі — примусово маленьке З І ПЕРШОГО КАДРУ
+   (поширене правило для вікі-зображень; якщо хост інший — є fallback нижче)
+   ================================ */
+img[src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Prague_%286365119737%29.jpg"]{
+  max-width: 250px !important; /* ← як ти попросив */
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* Fallback: якщо з якихось причин хост інший — звузимо перше фото на сторінці */
+body img:first-of-type{
+  max-width: 250px !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* ================================
+   3) Обгортка для фото + стилі кнопок (Завдання 2)
+   ================================ */
+.image-area{ margin-top: 10px; }
+
+.image-container{
+  display: block;
+  border: 1px dashed rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Підстрахуємо ще раз усередині контейнера */
+.image-container img{
+  display: block;
+  max-width: 250px;  /* тримаємо маленьким */
+  width: 100%;
+  height: auto;
+  transform-origin: left top; /* масштабування від лівого верхнього */
+  transition: transform .2s ease;
+}
+
+.controls{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.controls button{
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: #eee;
+  cursor: pointer;
+}
+.controls button:hover{ background: #e3e3e3; }
