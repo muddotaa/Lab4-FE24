@@ -1,6 +1,6 @@
-// Чекаємо, поки весь HTML-документ завантаться
+
 document.addEventListener('DOMContentLoaded', () => {
-  // --- Завдання 1: Зміна кольорів ---
+
   const element4 = document.getElementById('element-4');
   const element5 = document.querySelector('#element-5');
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Завдання 2: Керування зображенням — текст відсовується ---
+
   const image = document.getElementById('prague-image');
   const addButton = document.getElementById('add-btn');
   const zoomInButton = document.getElementById('zoom-in-btn');
@@ -41,29 +41,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!image || !addButton || !zoomInButton || !zoomOutButton || !removeButton) return;
 
-  // Початкова ширина (як у макеті)
+
   let width = 250;
 
-  // Допоміжне: показати зображення і «зняти» обмеження max-width
+
   function ensureShown() {
-    image.style.display = 'block'; // Цей рядок може не спрацювати, якщо CSS має !important
-    image.style.setProperty('display', 'block', 'important'); // Але цей спрацює
+    image.style.display = 'block';
+    image.style.setProperty('display', 'block', 'important'); 
     image.style.height = 'auto';
     image.style.setProperty('max-width', 'none', 'important');
   }
 
-  // Ініціалізація
+
   ensureShown();
   image.style.setProperty('width', width + 'px', 'important');
 
-  // Додати (скидає до 250px)
+
   addButton.addEventListener('click', () => {
     width = 250;
     ensureShown();
     image.style.setProperty('width', width + 'px', 'important');
   });
 
-  // Збільшити (крок 10%, до 1000px)
+
   zoomInButton.addEventListener('click', () => {
     ensureShown();
     const next = Math.min(1000, Math.round((image.clientWidth || width) * 1.1));
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     image.style.setProperty('width', width + 'px', 'important');
   });
 
-  // Зменшити (крок −10%, не менше 100px)
+
   zoomOutButton.addEventListener('click', () => {
     ensureShown();
     const next = Math.max(100, Math.round((image.clientWidth || width) * 0.9));
@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     image.style.setProperty('width', width + 'px', 'important');
   });
 
-  // Видалити (сховати)
+
   removeButton.addEventListener('click', () => {
-    image.style.setProperty('display', 'none', 'important'); // ВИПРАВЛЕНО
+    image.style.setProperty('display', 'none', 'important'); 
   });
 });
