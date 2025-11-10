@@ -1,6 +1,4 @@
-/* ================================
-   1) Клікабельні текстові елементи (Завдання 1)
-   ================================ */
+
 .clickable{
   display: inline-block;
   padding: 2px 4px;
@@ -8,22 +6,19 @@
   cursor: pointer;
   transition: background .2s ease, color .2s ease;
 }
-.toggled-a{ background:#fbbf24 !important; color:#111827 !important; } /* getElementById */
-.toggled-b{ background:#34d399 !important; color:#111827 !important; } /* querySelector  */
+.toggled-a{ background:#fbbf24 !important; color:#111827 !important; } 
+.toggled-b{ background:#34d399 !important; color:#111827 !important; } 
 .toggled-neutral{ background:#bde0fe !important; color:#111827 !important; }
 
-/* ================================
-   2) Фото з Вікі — примусово маленьке З І ПЕРШОГО КАДРУ
-   (поширене правило для вікі-зображень; якщо хост інший — є fallback нижче)
-   ================================ */
+
 img[src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Prague_%286365119737%29.jpg"]{
-  max-width: 250px !important; /* ← як ти попросив */
+  max-width: 250px !important; 
   width: 100% !important;
   height: auto !important;
   display: block !important;
 }
 
-/* Fallback: якщо з якихось причин хост інший — звузимо перше фото на сторінці */
+
 body img:first-of-type{
   max-width: 250px !important;
   width: 100% !important;
@@ -31,9 +26,7 @@ body img:first-of-type{
   display: block !important;
 }
 
-/* ================================
-   3) Обгортка для фото + стилі кнопок (Завдання 2)
-   ================================ */
+
 .image-area{ margin-top: 10px; }
 
 .image-container{
@@ -44,13 +37,13 @@ body img:first-of-type{
   margin-bottom: 10px;
 }
 
-/* Підстрахуємо ще раз усередині контейнера */
+
 .image-container img{
   display: block;
-  max-width: 250px;  /* тримаємо маленьким */
+  max-width: 250px;  
   width: 100%;
   height: auto;
-  transform-origin: left top; /* масштабування від лівого верхнього */
+  transform-origin: left top; 
   transition: transform .2s ease;
 }
 
